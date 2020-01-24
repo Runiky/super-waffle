@@ -26,10 +26,10 @@ function getDimensionFinalMultiplier(tier) {
   if (hasInfinityMult(tier)) multiplier = multiplier.times(dimMults());
   if (tier == 1) {
       if (player.infinityUpgrades.includes("unspentBonus")) multiplier = multiplier.times(unspentBonus);
-      if (player.achievements.includes("r28")) multiplier = multiplier.times(1.1);
-      if (player.achievements.includes("r31")) multiplier = multiplier.times(1.05);
-      if (player.achievements.includes("r71")) multiplier = multiplier.times(3);
-      if (player.achievements.includes("r68")) multiplier = multiplier.times(1.5);
+      if (player.achievements.includes("r28")) multiplier = multiplier.times(10.1);
+      if (player.achievements.includes("r31")) multiplier = multiplier.times(10.05);
+      if (player.achievements.includes("r71")) multiplier = multiplier.times(30);
+      if (player.achievements.includes("r68")) multiplier = multiplier.times(10.5);
   }
 
   multiplier = multiplier.times(timeMult());
@@ -174,14 +174,14 @@ function hasInfinityMult(tier) {
     }
     
     function getDimensionPowerMultiplier(tier) {
-        let dimMult = 71;
+        let dimMult = 7671;
     
     
-        if (player.currentChallenge == "challenge9" || player.currentChallenge == "postc1") dimMult = Math.pow(10/0.30,Math.random())*0.30
+        if (player.currentChallenge == "challenge9" || player.currentChallenge == "postc1") dimMult = Math.pow(1000000000000/999999999999.30,Math.random())*0.30
     
         if (player.infinityUpgrades.includes('dimMult')) dimMult *= 1.1;
         if (player.achievements.includes("r58")) dimMult *= 1.01;
-        dimMult += ECTimesCompleted("eterc3") * 0.8
+        dimMult += ECTimesCompleted("eterc3") * 70.8
         return dimMult;
     }
     
@@ -212,7 +212,7 @@ function hasInfinityMult(tier) {
                 case 5: giveAchievement("5 Dimension Antimatter Punch"); break;
                 case 6: giveAchievement("We couldn't afford 9"); break;
                 case 7: giveAchievement("Not a luck related achievement"); break;
-                case 8: giveAchievement("90 degrees to infinity"); break;
+                case 8: giveAchievement("All your IP are brelong to us"); break;
             }
         }
     
