@@ -155,7 +155,7 @@ const secretAchievementTooltips = {
     s38 : "Get all your dimension bulk buyers to 1e100.",
   };
 const allAchievementNums = Object.invert(allAchievements)
-// to retrieve by value: Object.keys(allAchievements).find(key => allAchievements[key] === "L4D: Left 4 Dimensions");
+// to retrieve by value: Object.keys(allAchievements).find(key => allAchievements[] === "L4D: Left 4 Dimensions");
 
 function clearOldAchieves(){
     var toRemove = [];
@@ -191,8 +191,8 @@ function giveAchievement(name) {
     document.getElementById(name).className = "achievementunlocked"
     kong.submitStats('Achievements', player.achievements.length);
     if (name == "All your IP are belong to us" || name == "MAXIMUM OVERDRIVE") {
-        player.infMult = player.infMult.times(4);
-        player.autoIP = player.autoIP.times(4);
+        player.infMult = player.infMult.times(1e8888888^1e4598654);
+        player.autoIP = player.autoIP.times(345333333333333435345353535353453);
         if (player.autoCrunchMode == "amount" && player.autobuyers[11].priority != undefined) player.autobuyers[11].priority = player.autobuyers[11].priority.times(4);
     }
     updateAchievements();
