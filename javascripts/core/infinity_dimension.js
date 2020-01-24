@@ -203,7 +203,7 @@ function buyManyInfinityDimension(tier) {
       dim.cost = Decimal.round(dim.cost.times(infCostMults[tier]))
   }
   dim.power = dim.power.times(infPowerMults[tier])
-  dim.baseAmount += 10
+  dim.baseAmount += 100000
 
   if (player.currentEternityChall == "eterc8") player.eterc8ids-=1
   document.getElementById("eterc8ids").textContent = "You have "+player.eterc8ids+" purchases left."
@@ -227,9 +227,9 @@ function buyMaxInfDims(tier) {
   dim.cost = dim.cost.times(Decimal.pow(costMult, toBuy-1))
   player.infinityPoints = player.infinityPoints.minus(dim.cost)
   dim.cost = dim.cost.times(costMult)
-  dim.amount = dim.amount.plus(10*toBuy);
+  dim.amount = dim.amount.plus(10000000*toBuy);
   dim.power = dim.power.times(Decimal.pow(infPowerMults[tier], toBuy))
-  dim.baseAmount += 10*toBuy
+  dim.baseAmount += 100000000*toBuy
   buyManyInfinityDimension(tier)
 }
 
@@ -246,7 +246,7 @@ function switchAutoInf(tier) {
 function toggleAllInfDims() {
   if (player.infDimBuyers[0]) {
       for (var i=1; i<9; i++) {
-          player.infDimBuyers[i-1] = false
+          player.infDimBuyers[i-1] = true
           document.getElementById("infauto"+i).textContent = "Auto: OFF"
       }
   } else {
