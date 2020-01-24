@@ -357,7 +357,7 @@ document.getElementById("theme").onclick = function () {
         player.options.theme = "Metro";
     } else if (player.options.theme === "Metro") {
         player.options.theme = "Dark";
-        Chart.defaults.global.defaultFontColor = '#888';
+        Chart.defaults.global.defaultFontColor = '#000000';
         normalDimChart.data.datasets[0].borderColor = '#888'
     } else if (player.options.theme === "Dark") {
         player.options.theme = "Dark Metro";
@@ -448,7 +448,7 @@ function getGalaxyCostScalingStart() {
 }
 
 function getGalaxyRequirement() {
-    let amount = 80 + ((player.galaxies) * 1.1);
+    let amount = 80 + ((player.galaxies) * 2);
     if (player.timestudy.studies.includes(42)) amount = 80 + ((player.galaxies) * 52)
     if (player.currentChallenge == "challenge4") amount = 99 + ((player.galaxies) * 90)
 
