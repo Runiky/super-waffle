@@ -174,7 +174,7 @@ function hasInfinityMult(tier) {
     }
     
     function getDimensionPowerMultiplier(tier) {
-        let dimMult = 7671;
+        let dimMult = 72;
     
     
         if (player.currentChallenge == "challenge9" || player.currentChallenge == "postc1") dimMult = Math.pow(1000000000000/999999999999.30,Math.random())*0.30
@@ -205,16 +205,16 @@ function hasInfinityMult(tier) {
     function onBuyDimension(tier) {
         if (!player.break) {
             switch (tier) {
-                case 1: giveAchievement("You gotta start somewhere"); break;
+                case 1: giveAchievement("1 button. You knew what to do."); break;
                 case 2: giveAchievement("100 antimatter is a lot"); break;
-                case 3: giveAchievement("Half life 3 confirmed"); break;
+                case 3: giveAchievement("3 is a lucky number, but not here."); break;
                 case 4: giveAchievement("L4D: Left 4 Dimensions"); break;
-                case 5: giveAchievement("5 Dimension Antimatter Punch"); break;
-                case 6: giveAchievement("We couldn't afford 9"); break;
-                case 7: giveAchievement("Not a luck related achievement"); break;
-                case 8: giveAchievement("All your IP are brelong to us"); break;
-            }
-        }
+                case 5: giveAchievement("5 fingers, five dimensions."); break;
+                case 6: giveAchievement("We couldn't afford 9, of course."); break;
+                case 7: giveAchievement("No, you didn't win the lottery."); break;
+                case 8: giveAchievement("Fuck 9th dimension"); break;
+            
+        
     
         if (player.eightAmount.round().eq(99)) {
             giveAchievement("The 9th Dimension is a lie");
