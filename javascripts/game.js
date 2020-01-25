@@ -448,7 +448,7 @@ function getGalaxyCostScalingStart() {
 }
 
 function getGalaxyRequirement() {
-    let amount = 80 + ((player.galaxies) * 2);
+    let amount = 80 + ((player.galaxies) * 1.5);
     if (player.timestudy.studies.includes(42)) amount = 80 + ((player.galaxies) * 52)
     if (player.currentChallenge == "challenge4") amount = 99 + ((player.galaxies) * 90)
 
