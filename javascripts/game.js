@@ -99,7 +99,7 @@ var player = {
     postC4Tier: 0,
     postC3Reward: new Decimal(1),
     eternityPoints: new Decimal(0),
-    eternities: 0,
+    eternities: 89,
     thisEternity: 0,
     bestEternity: 9999999999,
     eternityUpgrades: [],
@@ -230,7 +230,7 @@ var player = {
         auto: [true, true, true]
     },
     timestudy: {
-        theorem: 0,
+        theorem: 1e308,
         amcost: new Decimal("0"),
         ipcost: new Decimal(1),
         epcost: new Decimal(1),
@@ -1031,7 +1031,7 @@ function buyEternityUpgrade(name, cost) {
 
 function buyEPMult() {
     if (player.eternityPoints.gte(player.epmultCost)) {
-        player.epmult = player.epmult.times(5)
+        player.epmult = player.epmult.times(1.000000001)
         player.eternityBuyer.limit = player.eternityBuyer.limit.times(5)
         document.getElementById("priority13").value = formatValue("Scientific", player.eternityBuyer.limit, 2, 0);
         player.eternityPoints = player.eternityPoints.minus(player.epmultCost)
