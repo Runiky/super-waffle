@@ -19,14 +19,14 @@ var player = {
     money: new Decimal(10),
     tickSpeedCost: new Decimal(1000),
     tickspeed: new Decimal(1000),
-    firstCost: new Decimal(0),
-    secondCost: new Decimal(00),
-    thirdCost: new Decimal(0000),
-    fourthCost: new Decimal(0000),
-    fifthCost: new Decimal(0),
-    sixthCost: new Decimal(1),
-    seventhCost: new Decimal(1),
-    eightCost: new Decimal(1),
+    firstCost: new Decimal(10),
+    secondCost: new Decimal(100),
+    thirdCost: new Decimal(10000),
+    fourthCost: new Decimal(1000000),
+    fifthCost: new Decimal(1e9),
+    sixthCost: new Decimal(1e13),
+    seventhCost: new Decimal(1e18),
+    eightCost: new Decimal(1e24),
     firstAmount: new Decimal(0),
     secondAmount: new Decimal(0),
     thirdAmount: new Decimal(0),
@@ -56,7 +56,7 @@ var player = {
     infinityUpgrades: [],
     challenges: [],
     currentChallenge: "",
-    infinityPoints: new Decimal(1.78e308),
+    infinityPoints: new Decimal(0),
     infinitied: 0,
     infinitiedBank: 0,
     totalTimePlayed: 0,
@@ -71,8 +71,8 @@ var player = {
     interval: null,
     lastUpdate: new Date().getTime(),
     autobuyers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    costMultipliers: [new Decimal(1.2), new Decimal(1.1), new Decimal(1.1), new Decimal(1.1), new Decimal(1.1), new Decimal(1.1), new Decimal(1.1), new Decimal(1.1)],
-    tickspeedMultiplier: new Decimal(1,5),
+    costMultipliers: [new Decimal(1e3), new Decimal(1e4), new Decimal(1e5), new Decimal(1e6), new Decimal(1e8), new Decimal(1e10), new Decimal(1e12), new Decimal(1e15)],
+    tickspeedMultiplier: new Decimal(10),
     chall2Pow: 1,
     chall3Pow: new Decimal(0.01),
     matter: new Decimal(0),
@@ -80,7 +80,7 @@ var player = {
     partInfinityPoint: 0,
     partInfinitied: 0,
     break: false,
-    challengeTimes: [6*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31],
+    challengeTimes: [600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31],
     infchallengeTimes: [600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31, 600*60*24*31],
     lastTenRuns: [[600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1]],
     lastTenEternities: [[600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1], [600*60*24*31, 1]],
@@ -99,69 +99,69 @@ var player = {
     postC4Tier: 0,
     postC3Reward: new Decimal(1),
     eternityPoints: new Decimal(0),
-    eternities: 89,
+    eternities: 0,
     thisEternity: 0,
     bestEternity: 9999999999,
     eternityUpgrades: [],
     epmult: new Decimal(1),
     epmultCost: new Decimal(500),
     infinityDimension1 : {
-        cost: new Decimal(1),
+        cost: new Decimal(1e8),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
     infinityDimension2 : {
-        cost: new Decimal(1),
+        cost: new Decimal(1e9),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
     infinityDimension3 : {
-        cost: new Decimal(1),
+        cost: new Decimal(1e10),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
     infinityDimension4 : {
-        cost: new Decimal(1),
+        cost: new Decimal(1e20),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
     infinityDimension5 : {
-        cost: new Decimal(1),
+        cost: new Decimal(1e140),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
     infinityDimension6 : {
-        cost: new Decimal(1),
+        cost: new Decimal(1e200),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
     infinityDimension7 : {
-        cost: new Decimal(1),
+        cost: new Decimal(1e250),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
     infinityDimension8 : {
-        cost: new Decimal(1),
+        cost: new Decimal(1e280),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
-    infDimBuyers: [true, true, true, true, true, true, true, true],
+    infDimBuyers: [false, false, false, false, false, false, false, false],
     timeShards: new Decimal(0),
     tickThreshold: new Decimal(1),
     totalTickGained: 0,
@@ -172,43 +172,43 @@ var player = {
         bought: 0
     },
     timeDimension2: {
-        cost: new Decimal(1),
+        cost: new Decimal(5),
         amount: new Decimal(0),
         power: new Decimal(1),
         bought: 0
     },
     timeDimension3: {
-        cost: new Decimal(1),
+        cost: new Decimal(100),
         amount: new Decimal(0),
         power: new Decimal(1),
         bought: 0
     },
     timeDimension4: {
-        cost: new Decimal(1),
+        cost: new Decimal(1000),
         amount: new Decimal(0),
         power: new Decimal(1),
         bought: 0
     },
     timeDimension5: {
-        cost: new Decimal("1"),
+        cost: new Decimal("1e2350"),
         amount: new Decimal(0),
         power: new Decimal(1),
         bought: 0
     },
     timeDimension6: {
-        cost: new Decimal("1"),
+        cost: new Decimal("1e2650"),
         amount: new Decimal(0),
         power: new Decimal(1),
         bought: 0
     },
     timeDimension7: {
-        cost: new Decimal("1"),
+        cost: new Decimal("1e3000"),
         amount: new Decimal(0),
         power: new Decimal(1),
         bought: 0
     },
     timeDimension8: {
-        cost: new Decimal("1"),
+        cost: new Decimal("1e3350"),
         amount: new Decimal(0),
         power: new Decimal(1),
         bought: 0
@@ -221,17 +221,17 @@ var player = {
         amount: new Decimal(0),
         unl: false,
         chance: 0.01,
-        chanceCost: new Decimal(1e15),
+        chanceCost: new Decimal(1e150),
         interval: 1000,
-        intervalCost: new Decimal(1e14),
+        intervalCost: new Decimal(1e140),
         gal: 0,
         galaxies: 0,
         galCost: new Decimal(1e170),
-        auto: [true, true, true]
+        auto: [false, false, false]
     },
     timestudy: {
-        theorem: 1e308,
-        amcost: new Decimal("0"),
+        theorem: 0,
+        amcost: new Decimal("1e20000"),
         ipcost: new Decimal(1),
         epcost: new Decimal(1),
         studies: [],
@@ -243,7 +243,7 @@ var player = {
     etercreq: 0,
     autoIP: new Decimal(0),
     autoTime: 1e300,
-    infMultBuyer: true,
+    infMultBuyer: false,
     autoCrunchMode: "amount",
     respec: false,
     eternityBuyer: {
@@ -272,12 +272,12 @@ var player = {
     why: 0,
     options: {
         newsHidden: false,
-        notation: "Scientific",
+        notation: "Mixed scientific",
         //Standard = normal prefixed numbers, Scientific = standard form, Engineering = powers of 3.
-        scientific: true,
+        scientific: false,
         challConf: false,
-        sacrificeConfirmation: false,
-        retryChallenge: true,
+        sacrificeConfirmation: true,
+        retryChallenge: false,
         bulkOn: true,
         cloud: true,
         hotkeys: true,
@@ -293,7 +293,7 @@ var player = {
         },
         animations: {
             floatingText: true,
-            bigCrunch: false,
+            bigCrunch: true,
             eternity: true,
             tachyonParticles: true,
         }
@@ -357,7 +357,7 @@ document.getElementById("theme").onclick = function () {
         player.options.theme = "Metro";
     } else if (player.options.theme === "Metro") {
         player.options.theme = "Dark";
-        Chart.defaults.global.defaultFontColor = '#000000';
+        Chart.defaults.global.defaultFontColor = '#888';
         normalDimChart.data.datasets[0].borderColor = '#888'
     } else if (player.options.theme === "Dark") {
         player.options.theme = "Dark Metro";
@@ -441,14 +441,14 @@ function getInfinitied() {return Math.max(player.infinitied + player.infinitiedB
 
 
 function getGalaxyCostScalingStart() {
-    var n = 1000000 + ECTimesCompleted("eterc5")*5
+    var n = 100 + ECTimesCompleted("eterc5")*5
     if (player.timestudy.studies.includes(223)) n += 7
     if (player.timestudy.studies.includes(224)) n += Math.floor(player.resets/2000)
     return n
 }
 
 function getGalaxyRequirement() {
-    let amount = 80 + ((player.galaxies) * 2);
+    let amount = 80 + ((player.galaxies) * 60);
     if (player.timestudy.studies.includes(42)) amount = 80 + ((player.galaxies) * 52)
     if (player.currentChallenge == "challenge4") amount = 99 + ((player.galaxies) * 90)
 
@@ -459,12 +459,12 @@ function getGalaxyRequirement() {
     else if ((player.galaxies) >= galaxyCostScalingStart) {
         amount += Math.pow((player.galaxies)-(galaxyCostScalingStart-1),2)+(player.galaxies)-(galaxyCostScalingStart-1)
     }
-    if (player.galaxies >= 800000000) {
+    if (player.galaxies >= 800) {
         amount = Math.floor(amount * Math.pow(1.002, (player.galaxies-799)))
     }
 
-    if (player.infinityUpgrades.includes("resetBoost")) amount -= 99;
-    if (player.challenges.includes("postc5")) amount -= 11;
+    if (player.infinityUpgrades.includes("resetBoost")) amount -= 9;
+    if (player.challenges.includes("postc5")) amount -= 1;
 
     return amount;
 }
@@ -560,7 +560,7 @@ function updateDimensions() {
         if (player.timestudy.studies.includes(225)) extraGals += Math.floor(player.replicanti.amount.e / 1000)
         if (player.timestudy.studies.includes(226)) extraGals += Math.floor(player.replicanti.gal / 15)
         var galString = ""
-        if (player.galaxies >= 80000) galString += "Remote Antimatter Galaxies (";
+        if (player.galaxies >= 800) galString += "Remote Antimatter Galaxies (";
         else if (player.galaxies >= getGalaxyCostScalingStart() || player.currentEternityChall === "eterc5") galString += "Distant Antimatter Galaxies (";
         else galString += "Antimatter Galaxies (";
         galString += player.galaxies;
@@ -1031,7 +1031,7 @@ function buyEternityUpgrade(name, cost) {
 
 function buyEPMult() {
     if (player.eternityPoints.gte(player.epmultCost)) {
-        player.epmult = player.epmult.times(1.000000001)
+        player.epmult = player.epmult.times(5)
         player.eternityBuyer.limit = player.eternityBuyer.limit.times(5)
         document.getElementById("priority13").value = formatValue("Scientific", player.eternityBuyer.limit, 2, 0);
         player.eternityPoints = player.eternityPoints.minus(player.epmultCost)
