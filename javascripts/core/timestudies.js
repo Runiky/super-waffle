@@ -4,7 +4,7 @@ function buyWithAntimatter() {
   if (player.money.gte(player.timestudy.amcost)) {
       player.money = player.money.minus(player.timestudy.amcost)
       player.timestudy.amcost = player.timestudy.amcost.times(new Decimal("1e20000"))
-      player.timestudy.theorem += 1
+      player.timestudy.theorem += 3
       updateTheoremButtons()
       updateTimeStudyButtons()
       return true
@@ -15,7 +15,7 @@ function buyWithIP() {
   if (player.infinityPoints.gte(player.timestudy.ipcost)) {
       player.infinityPoints = player.infinityPoints.minus(player.timestudy.ipcost)
       player.timestudy.ipcost = player.timestudy.ipcost.times(1e100)
-      player.timestudy.theorem += 1
+      player.timestudy.theorem += 3
       updateTheoremButtons()
       updateTimeStudyButtons()
       return true
@@ -30,7 +30,7 @@ function buyWithEP() {
   if (player.eternityPoints.gte(player.timestudy.epcost)) {
       player.eternityPoints = player.eternityPoints.minus(player.timestudy.epcost)
       player.timestudy.epcost = player.timestudy.epcost.times(2)
-      player.timestudy.theorem += 1
+      player.timestudy.theorem += 3
       updateTheoremButtons()
       updateTimeStudyButtons()
       updateEternityUpgrades()
@@ -216,7 +216,7 @@ function canBuyDilationStudy(name) {
 }
 
 var all = [11, 21, 22, 33, 31, 32, 41, 42, 51, 61, 62, 71, 72, 73, 81, 82 ,83, 91, 92, 93, 101, 102, 103, 111, 121, 122, 123, 131, 132, 133, 141, 142, 143, 151, 161, 162, 171, 181, 191, 192, 193, 201, 211, 212, 213, 214, 221, 222, 223, 224, 225, 226, 227, 228, 231, 232, 233, 234]
-var studyCosts = [1, 3, 2, 2, 3, 2, 4, 6, 3, 3, 3, 4, 6, 5, 4, 6, 5, 4, 5, 7, 4, 6, 6, 12, 9, 9, 9, 5, 5, 5, 4, 4, 4, 8, 7, 7, 15, 200, 400, 730, 300, 900, 120, 150, 200, 120, 900, 900, 900, 900, 900, 900, 900, 900, 500, 500, 500, 500]
+var studyCosts = [1, 3, 2, 2, 3, 2, 4, 6, 3, 3, 3, 4, 6, 5, 4, 6, 5, 4, 5, 7, 4, 6, 6, 12, 9, 9, 9, 5, 5, 5, 4, 4, 4, 8, 7, 7, 15, 100, 200, 330, 500, 700, 120, 150, 100, 120, 100, 100, 100, 100, 100, 100, 100, 100, 500, 500, 500, 500]
 function updateTimeStudyButtons() {
   for (var i=0; i<all.length; i++) {
       if (!player.timestudy.studies.includes(all[i])) {
