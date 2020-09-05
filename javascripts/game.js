@@ -106,56 +106,56 @@ var player = {
     epmult: new Decimal(1),
     epmultCost: new Decimal(500),
     infinityDimension1 : {
-        cost: new Decimal(1e8),
+        cost: new Decimal(1e4),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
     infinityDimension2 : {
-        cost: new Decimal(1e9),
+        cost: new Decimal(1e5),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
     infinityDimension3 : {
-        cost: new Decimal(1e10),
+        cost: new Decimal(1e6),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
     infinityDimension4 : {
-        cost: new Decimal(1e20),
+        cost: new Decimal(1e7),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
     infinityDimension5 : {
-        cost: new Decimal(1e140),
+        cost: new Decimal(1e100),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
     infinityDimension6 : {
-        cost: new Decimal(1e200),
+        cost: new Decimal(1e120),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
     infinityDimension7 : {
-        cost: new Decimal(1e250),
+        cost: new Decimal(1e150),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
         baseAmount: 0
     },
     infinityDimension8 : {
-        cost: new Decimal(1e280),
+        cost: new Decimal(1e180),
         amount: new Decimal(0),
         bought: 0,
         power: new Decimal(1),
@@ -172,43 +172,43 @@ var player = {
         bought: 0
     },
     timeDimension2: {
-        cost: new Decimal(5),
+        cost: new Decimal(2),
         amount: new Decimal(0),
         power: new Decimal(1),
         bought: 0
     },
     timeDimension3: {
-        cost: new Decimal(100),
+        cost: new Decimal(3),
         amount: new Decimal(0),
         power: new Decimal(1),
         bought: 0
     },
     timeDimension4: {
-        cost: new Decimal(1000),
+        cost: new Decimal(4),
         amount: new Decimal(0),
         power: new Decimal(1),
         bought: 0
     },
     timeDimension5: {
-        cost: new Decimal("1e2350"),
+        cost: new Decimal("5"),
         amount: new Decimal(0),
         power: new Decimal(1),
         bought: 0
     },
     timeDimension6: {
-        cost: new Decimal("1e2650"),
+        cost: new Decimal("6"),
         amount: new Decimal(0),
         power: new Decimal(1),
         bought: 0
     },
     timeDimension7: {
-        cost: new Decimal("1e3000"),
+        cost: new Decimal("7"),
         amount: new Decimal(0),
         power: new Decimal(1),
         bought: 0
     },
     timeDimension8: {
-        cost: new Decimal("1e3350"),
+        cost: new Decimal("8"),
         amount: new Decimal(0),
         power: new Decimal(1),
         bought: 0
@@ -442,15 +442,15 @@ function getInfinitied() {return Math.max(player.infinitied + player.infinitiedB
 
 function getGalaxyCostScalingStart() {
     var n = 100 + ECTimesCompleted("eterc5")*5
-    if (player.timestudy.studies.includes(223)) n += 7
+    if (player.timestudy.studies.includes(223)) n += 69
     if (player.timestudy.studies.includes(224)) n += Math.floor(player.resets/2000)
     return n
 }
 
 function getGalaxyRequirement() {
-    let amount = 80 + ((player.galaxies) * 60);
-    if (player.timestudy.studies.includes(42)) amount = 80 + ((player.galaxies) * 52)
-    if (player.currentChallenge == "challenge4") amount = 99 + ((player.galaxies) * 90)
+    let amount = 80 + ((player.galaxies) * 6);
+    if (player.timestudy.studies.includes(42)) amount = 80 + ((player.galaxies) * 5)
+    if (player.currentChallenge == "challenge4") amount = 99 + ((player.galaxies) * 4)
 
     let galaxyCostScalingStart = getGalaxyCostScalingStart()
     if (player.currentEternityChall == "eterc5") {
